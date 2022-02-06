@@ -82,6 +82,6 @@ build_regex
 
 if [[ ! $START_LINE =~ $regexp ]]; then
   # commit message is invalid according to config - block commit
-  print_error
+  print_error "$START_LINE" "$regexp"
   exit 1
 fi
