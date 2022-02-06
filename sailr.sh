@@ -66,7 +66,7 @@ function print_error() {
   echo -e "Min length (first line): \e[36m$min_length\033[0m\n"
   echo -e "\e[37mRegex: \e[33m$regular_expression\033[0m"
   echo -e "\e[37mActual commit message: \e[33m\"$commit_message\"\033[0m"
-  echo -e "\e[37mActual length: \e[33m$(echo $commit_message | wc -c)\033[0m\n"
+  echo -e "\e[37mActual length: \e[33m$(echo -n $commit_message | wc -c)\033[0m\n"
 }
 
 set_config
